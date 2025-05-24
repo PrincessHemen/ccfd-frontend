@@ -1,9 +1,13 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 import LandingPage from './pages/LandingPage/LandingPage'
 import UploadPage from './pages/UploadPage/UploadPage'
 import ResultsPage from './pages/ResultsPage/ResultsPage'
+
+import About from './components/About/About';
+import Docs from './components/Docs/Docs';
+import Contact from './components/Contact/Contact';
 
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
@@ -23,6 +27,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/upload" element={<UploadPage />} />
           <Route path="/results" element={<ResultsPage />} />
+
+          <Route path="/about" element={<About />} />           
+          <Route path="/docs" element={<Docs />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* Optional: Add a catch-all route for 404 Not Found */}
           {/* <Route path="*" element={<NotFoundPage />} /> */}

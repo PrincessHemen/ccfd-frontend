@@ -14,3 +14,143 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+/* Landing Section Container */
+.landing-section {
+  background-color: #1a1a1a; /* Deep, dark gray background */
+  color: #e0e0e0; /* Light gray for general text */
+  padding: 4rem 2rem;
+  /* Make it take full height if content is short, but allow it to extend if needed */
+  min-height: calc(
+    100vh - var(--header-height, 4rem) - var(--footer-height, 4rem)
+  ); /* Adjust based on actual header/footer height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center align text content */
+}
+
+.landing-container {
+  max-width: 900px; /* Max width for content readability */
+  width: 100%;
+  padding: 3rem;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for content box */
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items within the container */
+  gap: 1.5rem; /* Spacing between elements */
+}
+
+/* Logo Styling */
+.landing-logo {
+  width: 150px; /* Adjust size as needed for your SVG */
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(
+    0 0 15px rgba(135, 206, 235, 0.6)
+  ); /* Light blue glow for logo */
+}
+
+/* Title */
+.landing-title {
+  color: #87ceeb; /* Light blue for the main title */
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 12px rgba(135, 206, 235, 0.5); /* Subtle blue glow */
+}
+
+/* Description Paragraph */
+.landing-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #c0c0c0; /* Muted gray for body text */
+  margin-bottom: 2.5rem;
+}
+
+/* Get Started Button */
+.get-started-button {
+  background-color: #87ceeb; /* Light blue background */
+  color: #1a1a1a; /* Dark text on light button */
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3); /* Initial blue glow */
+}
+
+.get-started-button:hover {
+  background-color: #ff1493; /* Neon pink on hover */
+  color: #ffffff; /* White text on hover */
+  box-shadow: 0 5px 20px rgba(255, 20, 147, 0.6); /* Stronger neon pink glow */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .landing-title {
+    font-size: 2.8rem;
+  }
+  .landing-description {
+    font-size: 1.15rem;
+  }
+  .get-started-button {
+    font-size: 1.3rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-section {
+    padding: 3rem 1.5rem;
+  }
+  .landing-container {
+    padding: 2rem;
+  }
+  .landing-logo {
+    width: 120px;
+  }
+  .landing-title {
+    font-size: 2.2rem;
+  }
+  .landing-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .get-started-button {
+    font-size: 1.2rem;
+    padding: 0.9rem 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-section {
+    padding: 2rem 1rem;
+  }
+  .landing-container {
+    padding: 1.5rem;
+  }
+  .landing-logo {
+    width: 100px;
+  }
+  .landing-title {
+    font-size: 1.8rem;
+  }
+  .landing-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .get-started-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+}

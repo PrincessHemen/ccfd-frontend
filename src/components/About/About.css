@@ -1,0 +1,187 @@
+/* Universal Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Body Styles */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI";
+  line-height: 1.5;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+/* About Section Container */
+.about-section {
+  background-color: #1a1a1a; /* Deep, dark gray background, consistent with header */
+  color: #e0e0e0; /* Light gray for general text */
+  padding: 4rem 2rem; /* Ample padding for content */
+  min-height: calc(
+    100vh - 6rem
+  ); /* Adjust based on header height, ensures content fills screen */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align content to the top */
+}
+
+.about-container {
+  max-width: 900px; /* Max width for readability */
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for the content box */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow for the content box */
+  text-align: left; /* Align text within the container to the left */
+}
+
+/* Main Title */
+.about-title {
+  color: #87ceeb; /* Light blue, consistent with logo */
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(135, 206, 235, 0.4); /* Subtle glow effect */
+}
+
+/* Section Headings (e.g., Key Features, How to Use) */
+.section-heading {
+  color: #ff1493; /* Neon pink for section headings */
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 20, 147, 0.3); /* Subtle neon pink underline */
+  text-shadow: 0 0 5px rgba(255, 20, 147, 0.3); /* Subtle glow */
+}
+
+/* General Paragraphs */
+.about-description,
+.about-footer {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #c0c0c0; /* Slightly lighter gray for body text for better readability */
+}
+
+/* Feature List & How-To List */
+.feature-list,
+.how-to-list {
+  list-style-type: none; /* Remove default list bullets/numbers */
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.feature-list li,
+.how-to-list li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem; /* Indent for custom bullet/number */
+  position: relative;
+  color: #e0e0e0; /* White/light gray for list items */
+}
+
+/* Custom list bullets/numbers */
+.feature-list li::before {
+  content: "⚡"; /* Lightning bolt emoji for features */
+  color: #87ceeb; /* Light blue color for the icon */
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+.how-to-list li::before {
+  content: counter(list-item) "."; /* Use CSS counter for numbered list */
+  counter-increment: list-item;
+  color: #ff1493; /* Neon pink for the numbers */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  top: 0;
+}
+
+/* Strong text within lists */
+.feature-list li strong {
+  color: #87ceeb; /* Light blue for emphasized text in features */
+}
+.how-to-list li strong {
+  color: #ff1493; /* Neon pink for emphasized text in how-to steps */
+}
+
+/* Links within content (e.g., "Contact Us" in footer) */
+.contact-link {
+  color: #ff1493; /* Neon pink for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  padding: 2.5rem;
+}
+
+.contact-link:hover {
+  color: #ffffff; /* White on hover */
+  text-shadow: 0 0 8px #ff1493; /* Subtle glow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-description,
+  .about-footer,
+  .feature-list li,
+  .how-to-list li {
+    font-size: 1rem;
+  }
+
+  .feature-list li::before,
+  .how-to-list li::before {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .feature-list li,
+  .how-to-list li {
+    padding-left: 1.2rem;
+  }
+}

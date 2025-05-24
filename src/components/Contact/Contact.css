@@ -1,0 +1,151 @@
+/* Universal Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Body Styles */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI";
+  line-height: 1.5;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+/* Contact Section Container */
+.contact-section {
+  background-color: #1a1a1a; /* Deep, dark gray background */
+  color: #e0e0e0; /* Light gray for general text */
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 6rem); /* Adjust based on header/footer height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top */
+}
+
+.contact-container {
+  max-width: 700px; /* Max width for readability */
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for content box */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  text-align: center; /* Center content within the container */
+}
+
+/* Main Title */
+.contact-title {
+  color: #ff1493; /* Neon pink for the main title */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.4); /* Subtle neon pink glow */
+}
+
+/* Introduction/Outro Paragraphs */
+.contact-intro,
+.contact-outro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #c0c0c0; /* Slightly lighter gray for body text */
+}
+
+/* Contact Links Group */
+.contact-links-group {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 1.2rem; /* Space between links */
+  margin-bottom: 3rem;
+  align-items: center; /* Center links in the column */
+}
+
+.contact-link {
+  display: inline-block; /* Allows padding and width */
+  background-color: rgba(135, 206, 235, 0.1); /* Light blue subtle background */
+  color: #87ceeb; /* Light blue text for links */
+  border: 1px solid #87ceeb; /* Light blue border */
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 200px; /* Ensure consistent width */
+  max-width: 90%; /* Max width for responsiveness */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+  background-color: #ff1493; /* Neon pink background on hover */
+  color: #ffffff; /* White text on hover */
+  border-color: #ff1493; /* Neon pink border on hover */
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.6); /* Stronger neon pink glow */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Specific colors for types of links (optional, but nice) */
+.contact-link.linkedin:hover {
+  background-color: #0a66c2; /* LinkedIn blue */
+  border-color: #0a66c2;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.6);
+}
+
+.contact-link.telegram:hover {
+  background-color: #0088cc; /* Telegram blue */
+  border-color: #0088cc;
+  box-shadow: 0 0 15px rgba(0, 136, 204, 0.6);
+}
+
+.contact-link.gmail:hover {
+  background-color: #ea4335; /* Gmail red */
+  border-color: #ea4335;
+  box-shadow: 0 0 15px rgba(234, 67, 53, 0.6);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-intro,
+  .contact-outro {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-link {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-links-group {
+    gap: 1rem;
+  }
+}

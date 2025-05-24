@@ -1,0 +1,178 @@
+/* Universal Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Body Styles */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI";
+  line-height: 1.5;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+/* Docs Section Container */
+.docs-section {
+  background-color: #1a1a1a; /* Deep, dark gray background */
+  color: #e0e0e0; /* Light gray for general text */
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 6rem); /* Adjust based on header height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.docs-container {
+  max-width: 1200px; /* Wider for the table content */
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #2a2a2a; /* Slightly lighter dark gray for content box */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+/* Main Title */
+.docs-title {
+  color: #87ceeb; /* Light blue, consistent with logo */
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(135, 206, 235, 0.4);
+}
+
+/* Introduction/Outro Paragraphs */
+.docs-intro,
+.docs-outro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #c0c0c0; /* Slightly lighter gray for body text */
+}
+
+/* Table Specific Styles */
+.table-wrapper {
+  overflow-x: auto; /* Enables horizontal scrolling for small screens if table is too wide */
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(135, 206, 235, 0.2); /* Subtle light blue border for the wrapper */
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  margin-bottom: 1rem;
+  min-width: 700px; /* Ensures table doesn't get too squeezed on smaller tablet views */
+}
+
+.docs-table th,
+.docs-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 20, 147, 0.1); /* Subtle neon pink separator */
+  text-align: left;
+}
+
+.docs-table thead th {
+  background-color: rgba(
+    255,
+    20,
+    147,
+    0.15
+  ); /* Light neon pink background for header */
+  color: #ff1493; /* Neon pink for header text */
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 20, 147, 0.3); /* Stronger top border */
+  border-bottom: 1px solid rgba(255, 20, 147, 0.5); /* Stronger bottom border */
+}
+
+.docs-table tbody tr:hover {
+  background-color: rgba(
+    135,
+    206,
+    235,
+    0.05
+  ); /* Very subtle light blue highlight on hover */
+}
+
+.docs-table tbody td {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.docs-table .column-name {
+  color: #87ceeb; /* Light blue for column names */
+  font-weight: bold;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; /* Monospaced font for names */
+  font-size: 1rem;
+}
+
+.docs-table .column-format {
+  color: #c0c0c0; /* Slightly muted color for format */
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; /* Monospaced font for format */
+}
+
+/* Link in outro paragraph */
+.docs-contact-link {
+  color: #ff1493; /* Neon pink for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.docs-contact-link:hover {
+  color: #ffffff; /* White on hover */
+  text-shadow: 0 0 8px #ff1493; /* Subtle glow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .docs-section {
+    padding: 2rem 1rem;
+  }
+
+  .docs-container {
+    padding: 1.5rem;
+  }
+
+  .docs-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .docs-intro,
+  .docs-outro,
+  .docs-table tbody td {
+    font-size: 0.9rem;
+  }
+
+  .docs-table th,
+  .docs-table td {
+    padding: 0.8rem 1rem;
+  }
+
+  .docs-table thead th {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .docs-container {
+    padding: 1rem;
+  }
+
+  .docs-title {
+    font-size: 1.8rem;
+  }
+  /* The table will automatically scroll horizontally due to overflow-x: auto on .table-wrapper */
+}
