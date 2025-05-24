@@ -14,3 +14,183 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+/* Results Section Container */
+.results-section {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 4rem 2rem;
+  min-height: calc(
+    100vh - var(--header-height, 4rem) - var(--footer-height, 4rem)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to top, allowing table to push down */
+}
+
+.results-container {
+  max-width: 900px; /* Wider for table content */
+  width: 100%;
+  padding: 3rem;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Titles and Descriptions */
+.results-title {
+  color: #87ceeb;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(135, 206, 235, 0.4);
+}
+
+.results-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #c0c0c0;
+  margin-bottom: 2rem;
+}
+
+/* Table Styling */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling for the table on small screens */
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for the table container */
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes space between borders */
+  min-width: 400px; /* Ensures table is at least this wide for very small screens */
+}
+
+.results-table th,
+.results-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #444; /* Darker border for rows */
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.results-table th {
+  background-color: #3a3a3a; /* Slightly lighter dark gray for header */
+  color: #87ceeb; /* Light blue for table headers */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky; /* Make headers sticky for long tables */
+  top: 0;
+  z-index: 10;
+}
+
+.results-table tbody tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+.results-table tbody tr:hover {
+  background-color: rgba(
+    135,
+    206,
+    235,
+    0.05
+  ); /* Subtle blue hover effect on rows */
+}
+
+/* Prediction Specific Styling */
+.results-table .fraud-detected {
+  color: #ff1493; /* Neon pink for "Fraud Detected" */
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 20, 147, 0.3); /* Subtle glow */
+}
+
+.results-table .no-fraud {
+  color: #7fffd4; /* Aquamarine/light green for "No Fraud" */
+  font-weight: bold;
+}
+
+/* No Results Message Styling */
+.no-results {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  border: 1px dashed #444;
+  color: #c0c0c0;
+  font-size: 1.1rem;
+}
+
+.no-results p {
+  margin-bottom: 0.5rem;
+}
+
+/* Link Style (reused from UploadPage, ensures consistency) */
+.docs-link {
+  color: #ff1493; /* Neon pink */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.docs-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ff1493;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .results-section {
+    padding: 3rem 1.5rem;
+  }
+  .results-container {
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .results-title {
+    font-size: 2.2rem;
+  }
+  .results-description {
+    font-size: 1rem;
+  }
+  .results-table th,
+  .results-table td {
+    padding: 1rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .no-results {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-section {
+    padding: 2rem 1rem;
+  }
+  .results-container {
+    padding: 1.5rem;
+  }
+  .results-title {
+    font-size: 1.8rem;
+  }
+  .results-description {
+    font-size: 0.9rem;
+  }
+  .results-table th,
+  .results-table td {
+    padding: 0.8rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .no-results {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

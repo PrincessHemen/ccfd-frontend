@@ -12,6 +12,9 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css';
+
 import './App.css'
 
 
@@ -38,6 +41,7 @@ function App() {
       </main>
 
       <Footer /> {/* Your global footer will always appear */}
+      <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   )
 }
