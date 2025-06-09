@@ -1,12 +1,19 @@
-# React + Vite
+# 💳 Credit Card Fraud Detection Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for my final year project: **Credit Card Fraud Detection System**. Built with **React JS** and styled using **CSS**, this interface allows users to upload a CSV file containing transaction records. The system sends the file to a machine learning-powered backend that analyzes the transactions and predicts whether they are fraudulent or not.
 
-Currently, two official plugins are available:
+## 🎯 Project Summary
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this project is to detect fraudulent credit card transactions using machine learning (a Random Forest model to be precise). 
 
-## Expanding the ESLint configuration
+The frontend allows users to:
+- Upload a `.csv` file containing transaction data.
+- View prediction results that indicate which transactions are likely fraudulent.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend**: React JS
+- **Styling**: CSS
+- **Machine Learning Model**: Random Forest (trained offline, served via backend API)
+- **Backend**: FastAPI (deployed separately, also in my Github repos)
+
