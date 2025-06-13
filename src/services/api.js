@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Base URL for your backend API
 // IMPORTANT: This should exactly match the address your FastAPI server reports.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'; 
+const API_BASE_URL = 'https://ccfd-fyp-backend-1.onrender.com' || 'http://127.0.0.1:8000'; 
 
 // Create an Axios instance
 const api = axios.create({

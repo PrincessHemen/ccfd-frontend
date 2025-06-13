@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact-links-group">
           {/* LinkedIn Link */}
           <a
-            href="https://www.linkedin.com/in/princess-hemen/" // REPLACE with your actual LinkedIn profile URL
+            href="https://www.linkedin.com/in/princess-hemen/" 
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link linkedin"
@@ -24,7 +24,7 @@ const Contact = () => {
 
           {/* Telegram Link */}
           <a
-            href="https://t.me/p_d_hemen" // REPLACE with your actual Telegram username
+            href="https://t.me/p_d_hemen" 
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link telegram"
@@ -34,7 +34,7 @@ const Contact = () => {
 
           {/* Gmail Link */}
           <a
-            href="hemendprincess@gmail.com" // REPLACE with your actual Gmail address
+            href="princesshemen@gmail.com" 
             className="contact-link gmail"
           >
             Gmail

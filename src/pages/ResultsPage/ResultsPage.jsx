@@ -71,7 +71,7 @@ const ResultsPage = () => {
                     <td>{index + 1}</td>
                     <td>{item.transactionId}</td>
                     <td className={item.prediction === 1 ? 'fraud-detected' : 'not-fraud'}>
-                      {item.prediction === 1 ? 'Fraud Detected' : 'No Fraud'}
+                      {item.prediction === 1 ? 'Possible Fraud Detected' : 'No Fraud'}
                     </td>
                   </tr>
                 ))}

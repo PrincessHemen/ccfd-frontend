@@ -22,11 +22,11 @@ function App() {
 
   return (
       <div className="app-container">
-      <Header />  {/* Your global header will always appear */}
+      <Header />  {/* global header always appear */}
 
-      <main className="app-main-content"> {/* This <main> tag will render your page components */}
+      <main className="app-main-content"> 
         <Routes>
-          {/* Define your routes here */}
+          {/* routes defined here */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/upload" element={<UploadPage />} />
           <Route path="/results" element={<ResultsPage />} />
@@ -35,12 +35,10 @@ function App() {
           <Route path="/docs" element={<Docs />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Optional: Add a catch-all route for 404 Not Found */}
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
         </Routes>
       </main>
 
-      <Footer /> {/* Your global footer will always appear */}
+      <Footer /> {/* global footer always appear */}
       <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   )
